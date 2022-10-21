@@ -1,1 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto&display=swap");
 @import "reset";
+@import "variables";
+@import "general-mixins";
+@import "my-reset";
+@import "header";
+@import "main-area";
+@import "footer";
+@import "warning";
+@import "helpersJsClasses";
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1226px;
+  margin: auto;
+}

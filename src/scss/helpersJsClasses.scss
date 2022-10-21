@@ -1,0 +1,25 @@
+﻿main {
+  .filterOrderArea {
+    .filterOrderArea__order {
+      .order__body {
+        .orderSelected {
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  main {
+    .container {
+      .filterOrderArea {
+        .filterOrderArea__order {
+          .orderOpen {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

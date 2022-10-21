@@ -1,19 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desenvolvedor M3</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvedor M3</title>
-  <link rel="stylesheet" href="main.css" />
-</head>
+  <body>
+    <header>
+      <div class="container">
+        <img src="./img/logo-m3.png" alt="logo da empresa" />
+        <div class="cart-icon">
+          <div class="cart-icon__handbag">
+            <div class="handbag__strap"></div>
+            <div class="handbag__body"></div>
+          </div>
+          <div class="cart-icon__circle">5</div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="filterOrderArea">
+          <div class="filterOrderArea__firstArea">
+            <h1>Blusas</h1>
+            <div class="firstArea__actions">
+              <button>filtrar</button>
+              <button>ordenar</button>
+            </div>
 
-<body>
+            <div class="filterOrderArea__filter">
+              <div class="filter__title">
+                <h2>filtrar</h2>
+                <img src="img/close.png" class="close" alt="botão de fechar" />
+              </div>
+              <div action="" class="filter__body">
+                <section class="filter__body__section">
+                  <div class="section__title">
+                    <h3>cores</h3>
+                    <span class="open"></span>
+                  </div>
+                  <form class="section__body section__body--color">
+                    <label>
+                      <span class="checkbox">
+                        <span class="marked"></span>
+                        <input type="checkbox" name="amarelo" />
+                      </span>
+                      amarelo
+                    </label>
+                    <label>
+                      <span class="checkbox">
+                        <span class="marked"></span>
+                        <input type="checkbox" name="azul" />
+                      </span>
+                      azul
+                    </label>
+                    <label>
+                      <span class="checkbox">
+                        <span class="marked"></span>
+                        <input type="checkbox" name="branco" />
+                      </span>
+                      branco
+                    </label>
+                    <label>
+                      <span class="checkbox">
+                        <span class="marked"></span>
+                        <input type="checkbox" name="cinza" />
+                      </span>
+                      cinza
+                    </label>
+                    <label>
+                      <span class="checkbox">
+                        <span class="marked"></span>
+                        <input type="checkbox" name="laranja" />
+                      </span>
+                      laranja
+                    </label>
+                    <label>
+                      <span class="checkbox">
+                        <span class="marked"></span>
+                        <input type="checkbox" name="verde" />
+                      </span>
+                      verde
+                    </label>
+                    <label>
+                      <span class="checkbox">
+                        <span class="marked"></span>
+                        <input type="checkbox" name="vermelho" />
+                      </span>
+                      vermelho
+                    </label>
+                    <label>
+                      <span class="checkbox">
+                        <span class="marked"></span>
+                        <input type="checkbox" name="preto" />
+                      </span>
+                      preto
+                    </label>
+                    <label>
+                      <span class="checkbox">
+                        <span class="marked"></span>
+                        <input type="checkbox" name="rosa" />
+                      </span>
+                      rosa
+                    </label>
+                    <label>
+                      <span class="checkbox">
+                        <span class="marked"></span>
+                        <input type="checkbox" name="vinho" />
+                      </span>
+                      vinho
+                    </label>
+                  </form>
+                </section>
+                <section class="filter__body__section">
+                  <div class="section__title">
+                    <h3>tamanhos</h3>
+                    <span class="open"></span>
+                  </div>
+                  <form class="section__body section__body--size">
+                    <label>
+                      <span class="size__item">p</span>
+                      <input type="checkbox" name="P" />
+                    </label>
 
-</body>
-<h1>Desafio m3</h1>
+                    <label>
+                      <span class="size__item">m</span>
+                      <input type="checkbox" name="M" />
+                    </label>
 
-<script src="bundle.js"></script>
+                    <label>
+                      <span class="size__item">g</span>
+                      <input type="checkbox" name="G" />
+                    </label>
 
+                    <label>
+                      <span class="size__item">gg</span>
+                      <input type="checkbox" name="GG" />
+                    </label>
+
+                    <label>
+                      <span class="size__item">u</span>
+                      <input type="checkbox" name="U" />
+                    </label>
+
+                    <label>
+                      <span class="size__item">36</span>
+                      <input type="checkbox" name="36" />
+                    </label>
+
+                    <label>
+                      <span class="size__item">38</span>
+                      <input type="checkbox" name="38" />
+                    </label>
+
+                    <label>
+                      <span class="size__item">40</span>
+                      <input type="checkbox" name="40" />
+                    </label>
+
+                    <label>
+                      <span class="size__item">42</span>
+                      <input type="checkbox" name="42" />
+                    </label>
+
+                    <label>
+                      <span class="size__item">44</span>
+                      <input type="checkbox" name="44" />
+                    </label>
+
+                    <label>
+                      <span class="size__item">46</span>
+                      <input type="checkbox" name="46" />
+                    </label>
+                  </form>
+                </section>
+
+                <section class="filter__body__section">
+                  <div class="section__title">
+                    <h3>Faixa de Preço</h3>
+                    <span class="open"></span>
+                  </div>
+                  <form class="section__body section__body--price">
+                    <label>
+                      <span class="checkbox">
+                        <span class="marked"></span>
+                        <input type="checkbox" name="0-50" />
+                      </span>
+                      de R$0 até R$50
+                    </label>
+                    <label>
+                      <span class="checkbox">
+                        <span class="marked"></span>
+                        <input type="checkbox" name="51-150" />
+                      </span>
+                      de R$51 até R$150
+                    </label>
+                    <label>
+                      <span class="checkbox">
+                        <span class="marked"></span>
+                        <input type="checkbox" name="151-300" />
+                      </span>
+                      de R$151 até R$300
+                    </label>
+                    <label>
+                      <span class="checkbox">
+                        <span class="marked"></span>
+                        <input type="checkbox" name="301-500" />
+                      </span>
+                      de R$301 até R$500
+                    </label>
+                    <label>
+                      <span class="checkbox">
+                        <span class="marked"></span>
+                        <input type="checkbox" name="500" />
+                      </span>
+                      a partir de R$ 500
+                    </label>
+                  </form>
+                </section>
+
+                <div class="filter__body__actions">
+                  <button class="action__button action__button--blue">
+                    aplicar
+                  </button>
+                  <button class="action__button">limpar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterOrderArea__order">
+            <div class="order__title">
+              <h2 class="order__title__mobile">ordenar</h2>
+              <h2 class="order__title__desktop">Ordenar por:</h2>
+              <img src="img/close.png" class="close" alt="botão de fechar" />
+              <span class="open"></span>
+            </div>
+            <div class="order__body">
+              <button class="order__body__option" data-order="recent">
+                Mais recentes
+              </button>
+              <button class="order__body__option" data-order="lowest">
+                Menor preço
+              </button>
+              <button class="order__body__option" data-order="biggest">
+                Maior preço
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="showcase"></section>
+        <div class="loadMore__area">
+          <button data-page="" class="loadMore__area__button">
+            Carregar mais
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer>M3: Implantação de E-commerce VTEX</footer>
+  </body>
+
+  <script src="bundle.js"></script>
 </html>
