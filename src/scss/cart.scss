@@ -1,26 +1,4 @@
-﻿@keyframes cartEntry {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -50px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes cartExit {
-  from {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    opacity: 0;
-    transform: translate3d(0, -50px, 0);
-  }
-}
-
-aside {
+﻿aside {
   position: fixed;
   top: 0;
   bottom: 0;

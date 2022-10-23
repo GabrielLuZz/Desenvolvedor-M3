@@ -27,8 +27,7 @@ export class Api {
       const json = await response.json();
 
       ProductHandler.changePage(page);
-
-      return json;
+      return ProductHandler.removeReapeatedProduct(json);
     } catch (err) {
       WarningHandler.showWarning("Erro ao carregar produtos");
       WarningHandler.clearWarnings();

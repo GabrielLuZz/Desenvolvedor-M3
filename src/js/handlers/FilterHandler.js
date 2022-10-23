@@ -3,22 +3,20 @@ import ProductHandler from "./ProductHandler.js";
 
 class FilterHandler {
   static markOrMarkOffCheckbox() {
-    const checkboxes = document.querySelectorAll(".marked, .size__item");
-
-    checkboxes.forEach((checkbox) => {
-      checkbox.addEventListener("click", (e) => {
+    const inputs = document.querySelectorAll(
+      ".marked ~ input, .size__item ~ input"
+    );
+    inputs.forEach((input) => {
+      input.addEventListener("change", (e) => {
+        const checkbox = e.path[1].querySelector("span");
         if (window.screen.width >= 1100) {
           setTimeout(() => {
             FilterHandler.filterProducts();
           }, 50);
         }
         if (checkbox.classList.contains("marked")) {
-          const input = e.currentTarget.nextElementSibling;
-
           FilterHandler.changeLayoutOfMarkedInput(input.checked, checkbox);
         } else {
-          const input = checkbox.nextElementSibling;
-
           FilterHandler.changeLayoutOfSizeInput(input.checked, checkbox);
         }
       });
@@ -27,19 +25,17 @@ class FilterHandler {
 
   static changeLayoutOfMarkedInput(checked, checkbox) {
     if (checked) {
-      checkbox.style.background = "transparent";
-    } else {
       checkbox.style.backgroundColor = "#00c0ee";
+    } else {
+      checkbox.style.background = "transparent";
     }
   }
 
   static changeLayoutOfSizeInput(checked, checkbox) {
     if (checked) {
-      checkbox.style.border = "1px solid rgba(0, 0, 0, 0.5)";
-      checkbox.style.color = "rgba(0, 0, 0, 0.5)";
+      checkbox.classList.add("size__item--selected");
     } else {
-      checkbox.style.border = "1px solid #00c0ee";
-      checkbox.style.color = "#000";
+      checkbox.classList.remove("size__item--selected");
     }
   }
 
@@ -52,9 +48,9 @@ class FilterHandler {
       input.checked = false;
 
       if (checkbox.classList.contains("marked")) {
-        FilterHandler.changeLayoutOfMarkedInput(!input.checked, checkbox);
+        FilterHandler.changeLayoutOfMarkedInput(input.checked, checkbox);
       } else {
-        FilterHandler.changeLayoutOfSizeInput(!input.checked, checkbox);
+        FilterHandler.changeLayoutOfSizeInput(input.checked, checkbox);
       }
     });
 

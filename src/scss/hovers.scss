@@ -1,0 +1,58 @@
+﻿@media (min-width: 1024px) {
+  header:hover {
+    .container {
+      .cart-icon {
+        animation: balanco 1s infinite;
+      }
+    }
+  }
+
+  main {
+    .container {
+      .filterOrderArea {
+        .filterOrderArea__order {
+          &:hover .order__title .open {
+            border-color: $primary-color;
+          }
+          .order__body {
+            .order__body__option:hover {
+              background-color: $primary-color;
+            }
+          }
+        }
+        .filterOrderArea__firstArea {
+          .filterOrderArea__filter {
+            .filter__body {
+              .filter__body__section {
+                .section__body--color label:hover,
+                .section__body--price label:hover {
+                  transform: translate(13px);
+                }
+                .section__body--size {
+                  label {
+                    span:hover {
+                      border: 1px solid $primary-color;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .showcase {
+        .card {
+          &:hover {
+            transform: scale(1.1);
+          }
+          button:hover {
+            border: 1px solid $black;
+            color: $black;
+            background-color: $white-color;
+          }
+        }
+      }
+    }
+  }
+}

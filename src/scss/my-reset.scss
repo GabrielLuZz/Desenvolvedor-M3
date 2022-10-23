@@ -16,3 +16,13 @@ button {
 .cart-icon {
   cursor: pointer;
 }
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1226px;
+  margin: auto;
+}

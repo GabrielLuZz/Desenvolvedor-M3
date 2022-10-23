@@ -47,6 +47,7 @@
         flex-direction: column;
         display: none;
         transition: all ease 0.5s;
+        z-index: 2;
 
         .filter__title {
           width: 100%;
@@ -110,6 +111,8 @@
                 font-size: 14px;
                 color: $black;
                 text-transform: capitalize;
+                cursor: pointer;
+                transition: 0.2s ease;
 
                 .checkbox {
                   width: 16px;
@@ -146,6 +149,10 @@
 
               label {
                 margin: 0;
+
+                span {
+                  transition: 0.2s ease;
+                }
 
                 input {
                   display: none;
@@ -214,6 +221,7 @@
       flex-direction: column;
       display: none;
       transition: all ease 0.5s;
+      z-index: 2;
       .order__title {
         width: 100%;
         height: 70px;
@@ -235,6 +243,7 @@
 
         .open {
           display: none;
+          transition: 0.5s ease;
         }
       }
 
@@ -265,11 +274,21 @@
     margin-top: 35px;
     max-width: 716px;
     margin-left: auto;
-    min-height: 680px;
+    min-height: 730px;
+
+    .notFoundWarning {
+      width: 64%;
+      display: block;
+      margin: auto;
+    }
 
     .card {
       width: 100%;
       max-width: 190px;
+      animation-name: cardEntry;
+      animation-duration: 1s;
+      transition: 0.5s ease;
+      height: max-content;
       img {
         width: 100%;
         height: 242px;
@@ -313,6 +332,7 @@
         font-size: 14px;
         text-transform: uppercase;
         color: $white-color;
+        transition: 0.5s ease;
       }
     }
   }

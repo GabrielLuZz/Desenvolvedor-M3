@@ -1,11 +1,30 @@
 ﻿main {
-  .filterOrderArea {
-    .filterOrderArea__order {
-      .order__body {
-        .orderSelected {
-          background-color: $primary-color;
+  .container {
+    .filterOrderArea {
+      .filterOrderArea__firstArea {
+        .filterOrderArea__filter {
+          .filter__body {
+            .filter__body__section {
+              .size__item--selected {
+                border: 1px solid $primary-color;
+                color: $black;
+              }
+            }
+          }
         }
       }
+
+      .filterOrderArea__order {
+        .order__body {
+          .orderSelected {
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+
+    .takeOutGrid {
+      display: block;
     }
   }
 }

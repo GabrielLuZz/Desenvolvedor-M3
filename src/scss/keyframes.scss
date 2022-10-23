@@ -1,0 +1,54 @@
+﻿@keyframes balanco {
+  0% {
+    top: 0;
+  }
+  25% {
+  }
+  50% {
+    top: 10px;
+  }
+  75% {
+    top: 5px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes cartEntry {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes cardEntry {
+  from {
+    opacity: 0;
+
+    transform: translate3d(0, 50px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes entrar {
+  0% {
+    transform: translate(500px);
+  }
+  25% {
+    transform: translate(0px);
+  }
+  75% {
+    transform: translate(100px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}

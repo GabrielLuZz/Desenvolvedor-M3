@@ -7,16 +7,56 @@ class ProductHandler {
   static showProducts(products) {
     const showcase = document.querySelector(".showcase");
 
-    products.forEach((product) => {
-      const htmlProduct = ProductHandler.buildProduct(product);
+    if (products.length > 0) {
+      showcase.classList.remove("takeOutGrid");
+      products.forEach((product) => {
+        const htmlProduct = ProductHandler.buildProduct(product);
 
-      showcase.append(htmlProduct);
-    });
+        showcase.append(htmlProduct);
+      });
+    } else {
+      this.showNotFoundWarning(showcase);
+    }
+  }
+
+  static showNotFoundWarning(showcase) {
+    const notFoundWarning = document.createElement("img");
+    notFoundWarning.classList.add("notFoundWarning");
+    notFoundWarning.src = "./img/notFound.jpg";
+    showcase.classList.add("takeOutGrid");
+    showcase.append(notFoundWarning);
+    const newspaperSpinning = [
+      { transform: "rotateY(0) scale(0)" },
+      { transform: "rotateY(360deg) scale(1)" },
+    ];
+    const newspaperTiming = {
+      duration: 800,
+      iterations: 1,
+    };
+    notFoundWarning.animate(newspaperSpinning, newspaperTiming);
   }
 
   static clearShowCase() {
     const showcase = document.querySelector(".showcase");
     showcase.innerText = "";
+  }
+
+  static removeReapeatedProduct(products) {
+    const analizedProducts =
+      JSON.parse(localStorage.getItem("@m3commerce:analyzedProducts")) || [];
+    const filteredProducts = products.filter((product) => {
+      if (!analizedProducts.includes(product.id)) {
+        analizedProducts.push(product.id);
+        return true;
+      }
+    });
+
+    localStorage.setItem(
+      "@m3commerce:analyzedProducts",
+      JSON.stringify(analizedProducts)
+    );
+
+    return filteredProducts;
   }
 
   static buildProduct(product) {
@@ -61,6 +101,8 @@ class ProductHandler {
     const nextPage = +currentPage + 1;
 
     const products = await api.getAll(nextPage);
+
+    console.log(products);
 
     if (products.length === 0) {
       return null;

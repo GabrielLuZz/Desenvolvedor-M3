@@ -40,12 +40,10 @@ loadMoreButton.addEventListener("click", ProductHandler.loadMoreProducts);
 
 FilterHandler.markOrMarkOffCheckbox();
 
-if (window.screen.width < 1100) {
-  applyFilterButton.addEventListener("click", () => {
-    FilterHandler.filterProducts();
-    FilterHandler.closeFilterInMobile();
-  });
-}
+applyFilterButton.addEventListener("click", () => {
+  FilterHandler.filterProducts();
+  FilterHandler.closeFilterInMobile();
+});
 
 orderButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
@@ -67,6 +65,7 @@ orderOpen.addEventListener("click", () => {
 
 filterMobileButton.addEventListener("click", () => {
   FilterHandler.openFilterInMobile();
+  FilterHandler.markOrMarkOffCheckbox();
 });
 
 filterCloserMobileButton.addEventListener("click", () => {
